@@ -13,9 +13,7 @@ import { TracingComponent } from './tracing/tracing.component';
 import { MainComponent } from './main/main.component';
 import { RoutingModule } from './routing.module';
 import {NgbCollapseModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; 
-
 
 
 @NgModule({
@@ -36,7 +34,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     RoutingModule, 
     NgbCollapseModule, NgbModule,
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient, sanitize: SecurityContext.NONE})
   ],
   providers: [],
   bootstrap: [AppComponent]
