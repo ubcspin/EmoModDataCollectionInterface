@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">{{appName}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarColor03" aria-controls="navbarColor03" 
+        aria-expanded="false" aria-label="Toggle navigation" 
+        (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+        class="collapse navbar-collapse"
+        id="navbarText"
+        [ngbCollapse]="isCollapsed"
+        >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li *ngFor="let tab of tabs"
+                    class="nav-item">
+                    <a [ngClass]="{'active': activeTab() === tab.link, 'nav-link': true}" href={{tab.link}}>{{tab.name}}</a>
+                </li>
+            </ul>
+            <span class="navbar-text"> 
+                <app-session-timer></app-session-timer>
+            </span>
+        </div>
+    </div>
+</nav>

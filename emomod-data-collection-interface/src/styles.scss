@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.card-body {
+    background-color: #F4F6F9;
+    border-width: 0px
+}
+
+.card {
+    border-width: 0px !important;
+}
